@@ -1,5 +1,7 @@
-		SuperLU (Version 5.2.x)
-		=======================
+[![Build Status](https://travis-ci.org/yoon-gu/SuperLU.svg?branch=master)](https://travis-ci.org/yoon-gu/SuperLU)
+
+SuperLU (Version 5.2.x)
+=======================
 
 SuperLU contains a set of subroutines to solve a sparse linear system 
 A*X=B. It uses Gaussian elimination with partial pivoting (GEPP). 
