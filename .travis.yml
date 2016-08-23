@@ -1,0 +1,19 @@
+sudo: true
+
+language: cpp
+
+compiler:
+  - gcc
+  - clang
+
+os:
+  - linux
+  - osx
+
+# command to run tests
+script: 
+  - make
+#   - make test
+  
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash)
