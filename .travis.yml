@@ -12,6 +12,7 @@ os:
 
 # command to run tests
 script: 
+  - export ROOT=`pwd`
   - make
   - make testing
   

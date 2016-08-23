@@ -25,7 +25,6 @@ lib: superlulib tmglib
 clean: cleanlib cleantesting
 
 install: blaslib
-	export ROOT=`pwd`
 	( cd INSTALL; $(MAKE) )
 #	( cd INSTALL; cp lsame.c ../SRC/; \
 #	  cp dlamch.c ../SRC/; cp slamch.c ../SRC/ )
