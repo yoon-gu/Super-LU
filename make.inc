@@ -18,14 +18,14 @@
 #
 #  The name of the libraries to be created/linked to
 #
-SuperLUroot	= /Users/j4c06/repos/SuperLU
+SuperLUroot	= $(ROOT)
 SUPERLULIB   	= $(SuperLUroot)/SRC/libsuperlu.a
 
 TMGLIB       	= libtmglib.a
 
 # BLASDEF 	= -DUSE_VENDOR_BLAS
-BLASLIB		= /Users/j4c06/repos/SuperLU/CBLAS/libblas.a
-LIBS		= $(SUPERLULIB) /Users/j4c06/repos/SuperLU/CBLAS/libblas.a
+BLASLIB		= $(SuperLUroot)/CBLAS/libblas.a
+LIBS		= $(SUPERLULIB) $(SuperLUroot)/CBLAS/libblas.a
 
 #
 #  The archiver and the flag(s) to use when building archive (library)
