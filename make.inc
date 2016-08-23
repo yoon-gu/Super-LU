@@ -14,7 +14,7 @@
 ############################################################################
 #
 # ToDo: Make this work for shared libraries and out-of-source builds.  Right
-# now it only works for builds under /Users/j4c06/repos/SuperLU/
+# now it only works for builds under $(ROOT)
 #
 #  The name of the libraries to be created/linked to
 #
