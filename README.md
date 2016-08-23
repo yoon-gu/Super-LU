@@ -1,2 +1,0 @@
-# SuperLU
-SuperLU Mirror
