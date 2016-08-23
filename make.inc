@@ -14,18 +14,18 @@
 ############################################################################
 #
 # ToDo: Make this work for shared libraries and out-of-source builds.  Right
-# now it only works for builds under /home/xiaoye/Dropbox/Codes/SuperLU/SuperLU_5.2.1/build/
+# now it only works for builds under /Users/j4c06/repos/SuperLU/
 #
 #  The name of the libraries to be created/linked to
 #
-SuperLUroot	= /home/xiaoye/Dropbox/Codes/SuperLU/SuperLU_5.2.1/build
+SuperLUroot	= /Users/j4c06/repos/SuperLU
 SUPERLULIB   	= $(SuperLUroot)/SRC/libsuperlu.a
 
 TMGLIB       	= libtmglib.a
 
 # BLASDEF 	= -DUSE_VENDOR_BLAS
-BLASLIB		= /home/xiaoye/Dropbox/Codes/SuperLU/SuperLU_5.2.1/build/CBLAS/libblas.a
-LIBS		= $(SUPERLULIB) /home/xiaoye/Dropbox/Codes/SuperLU/SuperLU_5.2.1/build/CBLAS/libblas.a
+BLASLIB		= /Users/j4c06/repos/SuperLU/CBLAS/libblas.a
+LIBS		= $(SUPERLULIB) /Users/j4c06/repos/SuperLU/CBLAS/libblas.a
 
 #
 #  The archiver and the flag(s) to use when building archive (library)
