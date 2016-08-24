@@ -46,4 +46,4 @@ LOADOPTS     =
 #
 # The directory in which Matlab is installed
 #
-MATLAB	     = /Applications/MATLAB_R2015b.app
+MATLAB	     = /Applications/MATLAB_R2016a.app
