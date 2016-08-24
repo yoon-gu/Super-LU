@@ -53,7 +53,7 @@ testmat:
 single: ./stest stest.out
 
 ./stest: $(SLINTST) $(ALINTST) $(SUPERLULIB) $(TMGLIB)
-	$(LOADER) $(LOADOPTS) $(SLINTST) $(ALINTST) \
+	$(LOADER) -Wall -fprofile-arcs -ftest-coverage  $(LOADOPTS) $(SLINTST) $(ALINTST) \
         $(TMGLIB) $(LIBS) -lm -o $@
 
 stest.out: stest stest.csh
@@ -63,7 +63,7 @@ stest.out: stest stest.csh
 double: ./dtest dtest.out
 
 ./dtest: $(DLINTST) $(ALINTST) $(SUPERLULIB) $(TMGLIB)
-	$(LOADER) $(LOADOPTS) $(DLINTST) $(ALINTST) \
+	$(LOADER) -Wall -fprofile-arcs -ftest-coverage $(LOADOPTS) $(DLINTST) $(ALINTST) \
         $(TMGLIB) $(LIBS) -lm -o $@
 
 dtest.out: dtest dtest.csh
@@ -73,7 +73,7 @@ dtest.out: dtest dtest.csh
 complex: ./ctest ctest.out
 
 ./ctest: $(CLINTST) $(ALINTST) $(SUPERLULIB) $(TMGLIB)
-	$(LOADER) $(LOADOPTS) $(CLINTST) $(ALINTST) \
+	$(LOADER) -Wall -fprofile-arcs -ftest-coverage $(LOADOPTS) $(CLINTST) $(ALINTST) \
 	$(TMGLIB) $(LIBS) -lm -o $@
 
 ctest.out: ctest ctest.csh
@@ -83,7 +83,7 @@ ctest.out: ctest ctest.csh
 complex16: ./ztest ztest.out
 
 ./ztest: $(ZLINTST) $(ALINTST) $(SUPERLULIB) $(TMGLIB)
-	$(LOADER) $(LOADOPTS) $(ZLINTST) $(ALINTST) \
+	$(LOADER) -Wall -fprofile-arcs -ftest-coverage $(LOADOPTS) $(ZLINTST) $(ALINTST) \
 	$(TMGLIB) $(LIBS) -lm -o $@
 
 ztest.out: ztest ztest.csh
@@ -98,7 +98,7 @@ dlamch.o: dlamch.c ; $(CC) -c $<
 timer.o:  timer.c ; $(CC) -O -c $<
 
 .c.o:
-	$(CC) $(CFLAGS) $(CDEFS) -I$(HEADER) -c $< $(VERBOSE)
+	$(CC) $(CFLAGS) -Wall -fprofile-arcs -ftest-coverage $(CDEFS) -I$(HEADER) -c $< $(VERBOSE)
 
 clean:	
 	rm -f *.o *test *.out

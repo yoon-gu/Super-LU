@@ -18,6 +18,8 @@ script:
   - export ROOT=`pwd`
   - make
   - make testing
+  - cd TESTING
+  - gcov *
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
